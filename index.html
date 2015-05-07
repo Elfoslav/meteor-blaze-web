@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blaze web</title>
+</head>
+<body>
+	Hello
+	
+	<p>This won't work:</p>
+	{{> hello}}
+</body>
+
+<script type="text/spacebars" name="main">
+  <h1>Main template</h1>
+  {{> hello}}
+</script>
+
+<script type="text/spacebars" name="hello">
+	<h2>Hello template</h2>
+	{{hello}}
+	<button>Increase counter</button>
+	<p>Counter is {{counter}}</p>
+	{{#each names}}
+		<p>{{this}}</p>
+	{{/each}}
+</script>
+
+<!-- Scripts must be at the end of this file (after templates) -->
+<script src="blaze.js"></script>
+<script src="app.js"></script>
+
+</html>
